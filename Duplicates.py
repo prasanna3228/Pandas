@@ -32,4 +32,12 @@ category_name=df3[df3['category']=='ipad']
 
 based_on_category_find_shipment_duplicates=category_name[category_name.duplicated(subset='shipment_number', keep=False)]
 result=based_on_category_find_shipment_duplicates
-print(result)
+# print(result)
+
+# If you want rows where either col1 or col2 has duplicates, use |:
+duplicates = df3[
+    df3['category'].duplicated(keep=False) |
+    df3['shipment_number'].duplicated(keep=False)
+]
+
+print(duplicates)
