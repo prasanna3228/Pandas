@@ -17,7 +17,3 @@ print(convert_into_numeric)
 
 # print(Mixed_text_and_number)
 # print(Mixed_text_and_number.dtypes)
-
-
-
-

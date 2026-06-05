@@ -10,6 +10,12 @@ Sheet2 =pd.DataFrame({
     'Salary':[50000,60000,70000,80000]
 })
 
-Merged_Sheet = pd.merge(Sheet1,Sheet2,on='ID',how='outer')
+# Merging_Two_Sheets = pd.merge(Sheet1,Sheet2) 
+Merging_Two_Sheets = pd.merge(Sheet1,Sheet2,on="ID",how="outer") # outer join
+Merging_Two_Sheets = pd.merge(Sheet1,Sheet2,on="ID",how="inner") # inner join
+Merging_Two_Sheets_left = pd.merge(Sheet1,Sheet2,on="ID",how="left") # left join
+Merging_Two_Sheets_right = pd.merge(Sheet1,Sheet2,on="ID",how="right") # right   join
 
-print(Merged_Sheet)
+
+
+print(Merging_Two_Sheets_left)

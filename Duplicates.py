@@ -40,4 +40,5 @@ duplicates = df3[
     df3['shipment_number'].duplicated(keep=False)
 ]
 
-print(duplicates)
+result=duplicates.drop_duplicates(inplace=True) # Remove duplicate rows from the result
+print(result)
